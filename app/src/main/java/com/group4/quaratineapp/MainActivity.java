@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        startRecommendations();
     }
 
     public void startExclusion(View view) {
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startRecommendations(View view) {
+    public void startRecommendations() {
         Intent intent = new Intent(this, Recommendations.class);
         startActivity(intent);
     }
