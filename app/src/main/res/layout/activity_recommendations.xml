@@ -6,4 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".recommendations.Recommendations">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#95B7ED"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/recommendationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Recommendations"
+            android:textColor="#000000"
+            android:textSize="45dp" />
+
+        <ImageView
+            android:id="@+id/rec_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_launcher_background"
+            android:background="#000000"
+            android:padding="1dp"></ImageView>
+
+        <TextView
+            android:id="@+id/instructionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="35dp"
+            android:text="title Sample">
+        </TextView>
+
+        <TextView
+            android:id="@+id/instructionBody"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="title Body">
+        </TextView>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="250dp"
+            android:layout_marginTop="15dp"
+            android:text="Next recommendation"
+            android:layout_height="60dp">
+
+
+        </Button>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
