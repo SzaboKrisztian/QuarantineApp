@@ -12,6 +12,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -99,5 +100,13 @@ public class Exclusion extends FragmentActivity implements OnMapReadyCallback {
         mMap.addMarker(new MarkerOptions().position(islandsBrygge).title("Exclusion zone: Islands Brygge"));
         // Center camera to central Copenhagen
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(55.6773672,12.580212), 13));
+    }
+
+    public void toSatelliteMap(View view){
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+    }
+
+    public void toNormalMap(View view){
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
 }
