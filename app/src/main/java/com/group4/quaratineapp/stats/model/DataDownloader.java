@@ -20,6 +20,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -223,8 +224,12 @@ public class DataDownloader {
     private boolean checkIfOutdated(String filename) {
         LocalDate yesterday = LocalDate.now().minusDays(1);
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate fileDate = LocalDate.parse(filename, dtf);
-        return fileDate.isBefore(yesterday);
+        try {
+            LocalDate fileDate = LocalDate.parse(filename, dtf);
+            return fileDate.isBefore(yesterday);
+        } catch (DateTimeParseException e) {
+            return true;
+        }
     }
 
     // Finds the newest file in a directory
