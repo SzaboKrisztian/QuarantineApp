@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QuaratineApp</string>
+    <string name="title_activity_exclusion_zone_activity">Map</string>
 </resources>
